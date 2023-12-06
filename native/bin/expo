@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+export REACT_ENV=development
+npx expo start --tunnel
