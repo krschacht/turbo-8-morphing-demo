@@ -2,6 +2,8 @@
   <%= turbo_stream_from project %>
 <% end %>
 
+<%= turbo_stream_from :projects %>
+
 <h1 class="title">
   You have <span><%= @projects.count %> </span> projects:
 </h1>
