@@ -1,11 +1,11 @@
 <%= turbo_stream_from @project %>
 
-<div class="flex" data-controller="url">
-  <turbo-frame class="w-[400px] h-screen overflow-y-auto" target="project" data-controller="turbo-frame-history">
+<div class="flex">
+  <turbo-frame id="projects" class="w-[400px] h-screen overflow-y-auto" target="project">
     <%= render 'projects' %>
   </turbo-frame>
 
-  <turbo-frame id="project" class="flex-1 ml-6">
+  <turbo-frame id="project" class="flex-1 ml-6" data-turbo-action="advance">
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul>
         <li>
@@ -22,6 +22,3 @@
     <%= render "projects/tasks", project: @project, tasks: @tasks %>
   </turbo-frame>
 </div>
-
-
-
