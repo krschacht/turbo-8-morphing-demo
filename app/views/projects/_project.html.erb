@@ -1,6 +1,6 @@
 <tr id="<%= dom_id project %>">
   <td>
-    <%= link_to project.name, project %>
+    <%= link_to project.name, project, data: { turbo_target: :project } %>
   </td>
 
   <td>
